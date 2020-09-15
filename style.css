@@ -1,0 +1,106 @@
+body, ul{
+    padding: 0;
+    margin: 0
+}
+
+.error {
+    background: #f1dfdf;
+    color: #de504c;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid;
+}
+
+.error p {
+    text-align: left;
+}
+
+p.warning-1 {
+    font-weight: bold;
+}
+
+p.warning-2 {
+    font-size: 12px;
+}
+
+.footer {
+    padding-bottom: 30px;
+}
+
+.input input {
+    border: 1px solid gray;
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px;
+    background: #FFF8D8;
+    /* margin: 3px 0; */
+}
+
+.input button{
+    width: 100%;
+    /* margin-top: 5px; */
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.input span {
+    font-style: italic;
+}
+
+.gate {
+    padding: 0 0 10px 0;
+}
+
+.gate img {
+    width: 80px;
+    margin-top: 7px;
+}
+
+.header img{
+    width: 90px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.slogan{
+    font-style: italic;
+}
+
+
+p.title {
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-top: 7px;
+}
+
+p.content {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.info {
+    border-radius: 0 0 4px 4px;
+    border: 1px solid black;
+    background: whitesmoke;
+    margin: 0 !important;
+}
+
+.info div {
+    padding: 10px;
+}
+
+div.main{
+    background: orange;
+}
+
+
+hr{
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+span.make-bold{
+    font-weight: bold;
+}

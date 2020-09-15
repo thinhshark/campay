@@ -1,0 +1,98 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Metfone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+<div class="container text-center">
+  <div class="header">
+    <a href="#"><img src="img/logo.png" alt=""></a>
+    <p class="slogan">Express payment gateway</p>
+  </div>
+  
+    <p>***</p>
+    <div class="row info">
+      <div class="resizeable col-sm-4">
+            <p class="title">TRANSACTION ID</p>
+            <p class="content">32472918273123</p>
+      </div>
+      <div class="resizeable col-sm-4 main">
+            <p class="title">AMOUNT</p>
+            <p class="content">$100.0</p>
+      </div>
+      <div class="resizeable col-sm-4">
+            <p class="title">USER ID</p>
+            <p class="content">572</p>
+      </div>
+    </div> <!-- row -->
+
+
+  <div class="input">
+    <div class="row">
+      <div class="col-sm-offset-4 col-sm-4">
+        <hr>
+        <form id="form" action="submit.html" method="POST">
+          <!-- <span>Input your TID:</span> -->
+          <input name="tid" type="number" placeholder="Input your phone number" value="">
+
+      <div id="html_element"></div>
+      <br><!-- 
+      <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+      </script> -->
+
+          <button class="btn btn-danger" type="submit" form="form" value="Submit">Get OTP</button>
+        </form>
+        <hr>
+      </div> <!-- col -->
+    </div> <!-- row -->
+  </div>
+
+
+</div> <!-- container -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : 'your_site_key'
+        });
+      };
+
+    jQuery(document).ready(function($) {
+      var alterClass = function() {
+        var ww = document.body.clientWidth;
+        if (ww <= 736 && ww >= 568) {
+          $('.resizeable').addClass('col-xs-4');
+        } else{
+          $('.resizeable').removeClass('col-xs-4');
+        }
+      };
+      $(window).resize(function(){
+        alterClass();
+      });
+      //Fire it when the page first loads:
+      alterClass();
+
+      $( window ).on( "orientationchange", function( event ) {
+        var ww = document.body.clientWidth;
+        if (ww <= 736 && ww >= 568) {
+          $('.resizeable').addClass('col-xs-4');
+        } else{
+          $('.resizeable').removeClass('col-xs-4');
+        }
+      });
+    });
+    </script>
+</body>
+
+</html>
